@@ -16,9 +16,9 @@ void setup()
 
 void loop()
 {  
-  digitalWrite(reset,HIGH);
+  /*digitalWrite(reset,HIGH);
   Serial.println("delay");
-  delay(3000);
+  delay(3000);*/
   Serial.println("start");
 
 //  for (int i = 0; i < 4 ; i++)
@@ -34,24 +34,38 @@ void loop()
 //  Serial.println("");
   
   
-//  delay(1000);
-//  digitalWrite(verrou, LOW);
-//  shiftOut(data, horloge, MSBFIRST, 1);
-//  digitalWrite(verrou, HIGH);
-//  delay(1000);
+  /*Serial.println("vanne 1");
+  digitalWrite(verrou, LOW);
+  shiftOut(data, horloge, MSBFIRST, 1);
+  digitalWrite(verrou, HIGH);
+  delay(3000);*/
 
   Serial.println("vanne 1");
   digitalWrite(verrou, LOW);
   shiftOut(data, horloge, MSBFIRST, 2);
   digitalWrite(verrou, HIGH);
-  delay(5000);
+  delay(3000);
 
   Serial.println("vanne 2");
   digitalWrite(verrou, LOW);
-  shiftOut(data, horloge, MSBFIRST, 4);
+  shiftOut(data, horloge, MSBFIRST, 8);
   digitalWrite(verrou, HIGH);
-  delay(2000);
+  delay(3000);
 
+/*  Serial.println("vanne 3");
+  digitalWrite(verrou, LOW);
+  shiftOut(data, horloge, MSBFIRST, 6);
+  digitalWrite(verrou, HIGH);
+  delay(3000);*/
+
+
+  /*Serial.println("vanne 4");
+  digitalWrite(verrou, LOW);
+  shiftOut(data, horloge, MSBFIRST, 8);
+  digitalWrite(verrou, HIGH);
+  delay(3000);
+*/
+  Serial.println("fin");
   digitalWrite(verrou, LOW);
   shiftOut(data, horloge, MSBFIRST, 0);
   digitalWrite(verrou, HIGH);
